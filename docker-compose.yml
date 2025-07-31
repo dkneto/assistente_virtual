@@ -1,0 +1,12 @@
+services:
+  assistente:
+    devices:
+        - "/dev/snd:/dev/snd"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    working_dir: /app
+    tty: true
+    stdin_open: true
